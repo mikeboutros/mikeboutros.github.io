@@ -1,0 +1,178 @@
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+
+@media all and (min-width: 1280px) {
+  // header h1 {
+  //   font-size: 4em;
+  // }
+
+  // @for $i from 1 through 5 {
+  //   .tech-skills-year-#{$i} {
+  //     grid-column: $i;
+  //     @include years;
+  //     writing-mode: horizontal-tb;
+  //     transform: rotate(0deg);
+  //     font-size: 1.5em;
+  //     font-family: Arial, Helvetica, sans-serif;
+  //   }
+  // }
+
+  // .transcript {
+  //   font-size: 1.4em;
+  // }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  // header h1 {
+  //   font-size: 4em;
+  // }
+
+  // .online-training-list {
+  //   grid-template-rows: 1fr repeat(2, 60px);
+  // }
+
+  // .tech-certs-list {
+  //   grid-template-columns: repeat(3, 1fr);
+  //   grid-template-rows: 1fr 30px repeat(1, 1fr);
+  //   grid-gap: 10px;
+
+  //   & img {
+  //     width: 150px;
+  //   }
+
+  //   & a {
+  //     font-size: 1.75em;
+  //   }
+  // }
+  
+  // .transcript {
+  //   font-size: 1.4em;
+  // }
+
+}
+
+@media all and (max-width: 992px) {
+    header h1 {
+    font-size: 3em;
+  }
+
+  // nav::after {
+  //   content: "MICHAEL BOUTROS";
+  //   color: #000;
+  //   padding: 1em 0em;
+  // }
+}
+
+@media all and (min-width: 992px) {
+
+  .tech-skills-box {
+    grid-template-rows: 100px 50px repeat(7, 1fr);
+
+    & img {
+      width: 115px;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    .tech-skills-year-#{$i} {
+      grid-column: $i;
+      @include years;
+      writing-mode: horizontal-tb;
+      transform: rotate(0deg);
+      font-size: 1.5em;
+      font-family: Arial, Helvetica, sans-serif;
+      align-self: center;
+    }
+  }
+
+  .tech-certs-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 60px 150px;
+
+    & img {
+      width: 150px;
+    }
+    
+    & a {
+      font-size: 1.75em;
+    }
+  }
+
+}
+
+@media all and (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .tech-certs-list {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    grid-template-rows: 60px 60px repeat(3, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  // header h1 {
+  //   font-size: 3em;
+  // }
+
+
+  // @for $i from 1 through 5 {
+  //   .tech-skills-year-#{$i} {
+  //     grid-column: $i;
+  //     @include years;
+  //     writing-mode: horizontal-tb;
+  //     transform: rotate(0deg);
+  //     font-size: 1.5em;
+  //     font-family: Arial, Helvetica, sans-serif;
+  //   }
+  // }
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  // header h1 {
+  //   font-size: 2.5em;
+  // }
+
+  // .tech-certs-list {
+  //   grid-template-columns: repeat(3, 1fr);
+  //   grid-template-rows: 60px 60px repeat(1, 1fr);
+
+  //   & img {
+  //     width: 150px;
+  //   }
+    
+  //   & a {
+  //     font-size: 1.25em;
+  //   }
+  // }
+}
+
+@media all and (max-width: 480px) {
+  // header h1 {
+  //   font-size: 2em;
+  // }
+  
+  //   .online-training-list {
+  //   grid-template-rows: 1fr repeat(2, 60px);
+  // }
+
+
+  .online-training-list {
+    grid-template-rows: 1fr repeat(4, 60px);
+    grid-template-columns: 1fr;
+  }
+}
+
+/*-----------------------------------------*/
