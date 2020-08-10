@@ -5,4 +5,4 @@ yarn-error.log
 /cypress/screenshots/
 /__sapper__/
 README1.md
-Nav4
+Nav4.svelte

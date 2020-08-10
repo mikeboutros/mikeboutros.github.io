@@ -55,13 +55,12 @@
     </button>
     {#if isOpen}
    <ul>
-       <li><a href="." active="{$page.path == "/"}">home</a></li>
-       <li><a href="/blog" active="{$page.path.startsWith("/blog")}">blog</a></li>
-       <!-- <li><a href="/blog" active="{$page.path == "/blog"}">blog</a></li> -->
-       <li><a href="/projects" active="{$page.path == "/projects"}">projects</a></li>
-       <li><a href="/tech-skills" active="{$page.path == "/tech-skills"}">technical skills</a></li>
-       <li><a href="/online-training" active="{$page.path == "/online-training"}">online training</a></li>
-       <li><a href="/tech-certs" active="{$page.path == "/tech-certs"}">technical certs</a></li>
+       <li><a href="." active="{$page.path == '/'}">home</a></li>
+       <li><a href="/blog" active="{$page.path.startsWith('/blog')}">blog</a></li>
+       <li><a href="/projects" active="{$page.path == '/projects'}">projects</a></li>
+       <li><a href="/tech-skills" active="{$page.path == '/tech-skills'}">technical skills</a></li>
+       <li><a href="/online-training" active="{$page.path == '/online-training'}">online training</a></li>
+       <li><a href="/tech-certs" active="{$page.path == '/tech-certs'}">technical certs</a></li>
    </ul>
    {/if}
 </nav>
