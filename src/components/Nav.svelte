@@ -1,67 +1,67 @@
- <script>
- 	import { stores } from '@sapper/app';
- 	const { page } = stores();
+<script>
+    import { stores } from '@sapper/app';
+    const { page } = stores();
 
- 	let isOpen = false;
- </script>
+    let isOpen = false;
+</script>
 
- <style lang="scss">
- 	@import "src/scss/global.scss";
+<style lang="scss">
+    @import "src/scss/global.scss";
 
- 	button {
- 		background: transparent;
- 		border: 2px solid transparent;
- 		border-radius: 50%;
- 		height: 2.5rem;
- 		padding: .25rem;
- 		cursor: pointer;
- 		stroke: #000;
- 		width: 2.5rem;
- 	}
+    button {
+        background: transparent;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        height: 2.5rem;
+        padding: .25rem;
+        cursor: pointer;
+        stroke: #000;
+        width: 2.5rem;
+    }
 
- 	ul {
- 		list-style-type: none;
- 		display: grid;
- 		grid-template-rows: repeat(2, 1fr);
- 		grid-template-columns: repeat(3, 1fr);
- 	}
+    ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
 
- 	@media all and (min-width: 992px) {
- 		ul {
- 			grid-template-rows: repeat(1, 1fr);
- 			grid-template-columns: repeat(6, 1fr);
- 		}
- 	}
+    @media all and (min-width: 992px) {
+        ul {
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
 
- 	li {
- 		justify-content: center;
- 		text-align: center;
- 		text-transform: uppercase;
- 	}
+    li {
+        justify-content: center;
+        text-align: center;
+        text-transform: uppercase;
+    }
 
- 	/* li + li {
-		margin-top: .5rem;
-    } */
- 	@import "src/scss/mediaqueries.scss";
- </style>
+    /* li + li {
+       margin-top: .5rem;
+   } */
+    @import "src/scss/mediaqueries.scss";
+</style>
 
- <svelte:window on:click="{() => isOpen = false}"></svelte:window>
+<svelte:window on:click="{() => isOpen = false}"></svelte:window>
 
- <nav>
- 	<button on:click|stopPropagation="{() => isOpen = !isOpen}">
- 		<svg viewBox="0 0 10 10" height="100%" width="100%">
- 			<path d="M1,2h8M1,5h8,M1,8h8" stroke-width="1" stroke-linecap="round" />
- 		</svg>
- 	</button>
- 	{#if isOpen}
-	<ul>
-		<li><a href="." class="nav-link" active="{$page.path == "/"}">home</a></li>
-		<!-- <li><a href="/blog" class="nav-link" active="{$page.path.startsWith("/blog")}">blog</a></li> -->
-		<li><a href="/blog" class="nav-link" active="{$page.path == "/blog"}">blog</a></li>
-        <li><a href="/projects" class="nav-link" active="{$page.path == "/projects"}">projects</a></li>
-		<li><a href="/tech-skills" class="nav-link" active="{$page.path == "/tech-skills"}">technical skills</a></li>
-        <li><a href="/online-training" class="nav-link" active="{$page.path == "/online-training"}">online training</a></li>
-        <li><a href="/tech-certs" class="nav-link" active="{$page.path == "/tech-certs"}">technical certs</a></li>
-	</ul>
-	{/if}
+<nav>
+    <button on:click|stopPropagation="{() => isOpen = !isOpen}">
+        <svg viewBox="0 0 10 10" height="100%" width="100%">
+            <path d="M1,2h8M1,5h8,M1,8h8" stroke-width="1" stroke-linecap="round" />
+        </svg>
+    </button>
+    {#if isOpen}
+   <ul>
+       <li><a href="." active="{$page.path == "/"}">home</a></li>
+       <li><a href="/blog" active="{$page.path.startsWith("/blog")}">blog</a></li>
+       <!-- <li><a href="/blog" active="{$page.path == "/blog"}">blog</a></li> -->
+       <li><a href="/projects" active="{$page.path == "/projects"}">projects</a></li>
+       <li><a href="/tech-skills" active="{$page.path == "/tech-skills"}">technical skills</a></li>
+       <li><a href="/online-training" active="{$page.path == "/online-training"}">online training</a></li>
+       <li><a href="/tech-certs" active="{$page.path == "/tech-certs"}">technical certs</a></li>
+   </ul>
+   {/if}
 </nav>
