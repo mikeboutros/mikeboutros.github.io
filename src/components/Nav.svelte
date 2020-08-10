@@ -47,6 +47,14 @@
 
 <svelte:window on:click="{() => isOpen = false}"></svelte:window>
 
+<div style="visibility: hidden; position: absolute;">
+	<a href="/blog">blog</a>
+	<a href="/projects">projects</a>
+	<a href="/tech-skills">tech-skills</a>
+	<a href="/online-training">online-training</a>
+	<a href="/tech-certs">tech-certs</a>
+  </div>
+
 <nav>
     <button on:click|stopPropagation="{() => isOpen = !isOpen}">
         <svg viewBox="0 0 10 10" height="100%" width="100%">
