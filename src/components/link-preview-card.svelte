@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
     import { onMount } from "svelte";
       
     export let href;
@@ -50,4 +50,4 @@
         {/if}
       </div>
     </div>
-  {/if} -->
+  {/if}

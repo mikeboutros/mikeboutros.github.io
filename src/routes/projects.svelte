@@ -1,13 +1,14 @@
 <script>
-    const letters = (() => {
-        const caps = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));
-        return caps.concat(caps.map(letter => letter.toLowerCase()));
-    })();
 
-    console.log(letters);
+const letters = (() => {
+    const caps = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));
+    return caps.concat(caps.map(letter => letter.toLowerCase()));
+})();
 
-    export function search(needle, haystack) {
-    return haystack.flat(6).includes(needle);
+console.log(letters);
+
+export function search(needle, haystack) {
+return haystack.flat(6).includes(needle);
 }
 
 const haystack = [1, 4, [5, 6, 7, [8, 18, [34, 17, [98, [210, [213]]]]]]];
@@ -30,34 +31,42 @@ console.log(search(needle, haystack));
     grid-gap: 10px;
 }
 
-h3 {
-    align-self: center;
-    // background: rgb(0, 179, 250);
-    padding: 10px;
-    border-radius: 10px;
-}
-
 pre, .result-style {
-    font-size: 12px;
+    // font-size: 12px;
     word-break: break-word;
     border-radius: 10px;
-    align-self: center;
-    padding: 16px;
+}
+
+code, .result-style {
     color: #fff;
-}
-
-code {
-    color: white;
-}
-
-.result-style {
-    background: rgb(250, 0, 0);
-    font-weight: bold;
 }
 
 pre {
     background: rgb(0, 158, 250);
+    border: 3px solid hsl(208, 100%, 49%);
 }
+
+.result-style {
+    background: rgb(223, 14, 14);
+    border: 3px solid hsl(0, 93%, 60%);
+    padding: 25px;
+}
+
+// .code-snippet {
+//     background: rgba(0, 250, 62, 0.781);
+//     font-weight: bold;
+//     padding: 10px;
+//     color: #fff;
+
+// }
+
+// div > p:first-of-type {
+
+//     &::before {
+//         color: red;
+//         content: "#";
+//     }
+// }
 
     @import "src/scss/mediaqueries.scss";
 </style>
@@ -68,14 +77,10 @@ pre {
 
 <div class="project-list">
 
-	<header>
+	<!-- <header>
         <h1>Projects</h1>
         <h3>Code Snippets</h3>
-    </header>
-    
-    <!-- <ul>
-        <li><a href='./projects/Python'>Alphabet Generator</a></li>
-    </ul> -->
+    </header> -->
 
 <h3>Alphabet Generator</h3>
 
@@ -83,15 +88,19 @@ pre {
     <code>
         {`
         const letters = (() => {
-        const caps = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));
+            const caps = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));  
             return caps.concat(caps.map(letter => letter.toLowerCase()));
-        })();
-            console.log(letters);
+            })();
+                console.log(letters);
         `}
     </code>
 </pre>
 
-<div class="result-style">Result: {@html letters}</div>
+<p>Result:</p>
+
+<div class="result-style">
+    {@html letters}
+</div>
 
 <!-- <h3>Lottery Generator</h3>
 
@@ -111,22 +120,89 @@ pre {
 
     <p>{@html lottery}</p> -->
 
-<h3>Needle and Haystack</h3>
+<h3>Needle In Haystack</h3>
 
 <pre>
     <code>
         {`
-        function search(needle, haystack) {
-            return haystack.flat(6).includes(needle);
-        }
-        const haystack = [1, 4, [5, 6, 7, [8, 18, [34, 17, [98, [210, [213]]]]]]];
-        const needle = 213;
-            
-        console.log(search(needle, haystack));
+        function search(needle, haystack)
+            {
+                return haystack.flat(6).includes(needle);
+            }
+            const haystack = [1, 4, [5, 6, 7, [8, 18, [34, 17, [98, [210, [213]]]]]]];
+            const needle = 213;
+        
+            console.log(search(needle, haystack));
         `}
     </code>
 </pre>
 
-<div class="result-style">Result: {@html search(needle, haystack)}</div>
+<p>Result:</p>
+
+<div class="result-style">
+    {@html search(needle, haystack)}
+</div>
+
+<h3>Code Snippets</h3>
+
+<!-- <pre>
+    <code>
+        {`
+            
+        `}
+    </code>
+</pre> -->
+
+<pre class="code-snippet">
+    <code>
+        {`
+        # Compare two folders
+        diff -qr /path/to/folder1 /path/to/folder2
+        
+        # Show build number of OS
+        sw_vers
+
+        # Generate secure password and copy to clipboard
+        LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy
+
+        # Convert audio file to iPhone ringtone
+        afconvert input.mp3 ringtone.m4r -f m4af
+    
+        # Convert file to HTML
+        # Supported formats are plain text, rich text (rtf) and Microsoft Word (doc/docx).
+        textutil -convert html file.ext
+
+        # Files, Disks and Volumes
+        # Create an empty file (creates an empty 10 gigabyte test file).
+        mkfile 10g {path/to/file/file.txt}
+        `}
+    </code>
+</pre>
+
+<h4>Host file online</h4>
+
+<pre class="code-snippet">
+    <code>
+        {`
+        # Python2
+        python -m SimpleHTTPServer 80
+        
+        # Python3
+        python3 -m http.server 80 
+        `}
+    </code>
+</pre>
+
+<h4>Setting up FTP server</h4>
+
+<pre class="code-snippet">
+    <code>
+        {`
+        # Python3
+        pip3 install pyftpdlib
+        python3 -m pyftpdlib -p 21 -w
+        `}
+    </code>
+</pre>
 
 </div>

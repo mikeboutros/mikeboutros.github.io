@@ -15,7 +15,7 @@
         height: 2.5rem;
         padding: .25rem;
         cursor: pointer;
-        stroke: #000;
+        stroke: #5e5858;
         width: 2.5rem;
     }
 
@@ -34,14 +34,13 @@
     }
 
     li {
-        justify-content: center;
+        // justify-content: center;
         text-align: center;
         text-transform: uppercase;
+        font-weight: bold;
+        text-underline-offset: -1em;
     }
 
-    /* li + li {
-       margin-top: .5rem;
-   } */
     @import "src/scss/mediaqueries.scss";
 </style>
 
@@ -70,5 +69,5 @@
        <li><a href="/online-training" active="{$page.path == '/online-training'}">online training</a></li>
        <li><a href="/tech-certs" active="{$page.path == '/tech-certs'}">technical certs</a></li>
    </ul>
-   {/if}
+    {/if}
 </nav>

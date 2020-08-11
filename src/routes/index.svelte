@@ -12,16 +12,16 @@
 	section {
 		display: grid;
 		grid-template-rows: 30px 1fr;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 10px;
 	}
 
 	p {
-		grid-column: 2 / -1;
+		grid-column: 1 / -1;
 	}
 
 	ul {
-		grid-column: 2 / 3;
+		grid-column: 1 / 3;
 	}
 
 	@import "src/scss/mediaqueries.scss";
@@ -43,5 +43,3 @@
 	</ul>
 
 </section>
-	
-<a href="/blog">blog</a>
