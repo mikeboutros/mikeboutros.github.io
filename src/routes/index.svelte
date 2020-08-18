@@ -4,15 +4,15 @@
 <style lang="scss">
 	@import "src/scss/global.scss";
 	
-	img {
-		width: 100%;
-		height: auto;
-	}
+	// img {
+	// 	width: 100%;
+	// 	height: auto;
+	// }
 
 	section {
 		display: grid;
-		grid-template-rows: 30px 1fr;
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: 50px 1fr;
+		grid-template-columns: 1fr;
 		grid-gap: 10px;
 	}
 
@@ -21,7 +21,7 @@
 	}
 
 	ul {
-		grid-column: 1 / 3;
+		grid-column: 1 / 2;
 	}
 
 	@import "src/scss/mediaqueries.scss";

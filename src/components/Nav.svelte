@@ -39,6 +39,7 @@
         text-transform: uppercase;
         font-weight: bold;
         text-underline-offset: -1em;
+        align-self: center;
     }
 
     @import "src/scss/mediaqueries.scss";

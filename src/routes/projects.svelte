@@ -32,7 +32,6 @@ console.log(search(needle, haystack));
 }
 
 pre, .result-style {
-    // font-size: 12px;
     word-break: break-word;
     border-radius: 10px;
 }
@@ -49,7 +48,7 @@ pre {
 .result-style {
     background: rgb(223, 14, 14);
     border: 3px solid hsl(0, 93%, 60%);
-    padding: 25px;
+    text-align: center;
 }
 
 // .code-snippet {

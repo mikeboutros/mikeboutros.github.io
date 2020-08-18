@@ -22,7 +22,7 @@
 
 	@media (min-width: 480px) {
 		h1 {
-			font-size: 4em;
+			font-size: 6em;
 		}
 	}
 </style>
