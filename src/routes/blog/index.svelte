@@ -15,8 +15,8 @@
 
 .blog-list {
 	display: grid;
-  grid-template-rows: 80px repeat(4, 1fr);
-  grid-template-columns: 1fr;
+  	grid-template-rows: 80px repeat(4, 1fr);
+  	grid-template-columns: 1fr;
 	grid-gap: 1em;
 }
 
@@ -30,16 +30,16 @@ li {
 @media all and (min-width: 992px) {
 	.blog-list {
     grid-template-rows: repeat(5, 1fr);
-	}
+  }
 }
 
-img{
+img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 3px;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: inherit;
 }
@@ -57,9 +57,12 @@ a{
 	float:left;
 	margin: 1% 0 1% 1.6%;
 }
-.col:first-child { margin-left: 0; }
 
-ul{
+.col:first-child {
+	margin-left: 0;
+}
+
+ul {
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
@@ -72,73 +75,44 @@ ul{
 /* Blog Posts */
 
 
-.blog-post{
-  padding: 35px 0px;
-  text-align: center;
-  align-self: center;
+.blog-post {
+	padding: 35px 0px;
+	text-align: center;
+	align-self: center;
 	box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.3);
+	grid-row: auto;
 }
 
-.blog-content{
+.blog-content {
 	font-size: 1em;
 	border-left: 5px solid #8EE5EE;
-  padding-left: 15px;
+  	padding-left: 15px;
 }
 
-.side-content{
+.side-content {
 	font-size: .9em;
 	margin-top: 8px;
 	margin-bottom: 0;
+}
+
+@media all and (max-width: 600px) {
+  .blog-title {
+    font-size: 0.5em;
+  }
 }
 
 // .blog-title{
 // 	margin-top: 5px;
 // }
 
-/* Button */
-
-.button{
-	display: block;
-	padding: 15px 20px;
-	margin-top: .8em;
-	background: #009ACD;
-	text-align: center;
-	color: #fff;
-	font-size: 1.4em;
-	border-radius: 3px;
-	transition: all .4s ease-in;
-}
-
-.button:hover{
-	background: #005c7b;
-}
-
 /* @685px*/
 @media only screen and (max-width: 42.813em) {
-	.blog-title{ font-size: 1.95em; }
-	.date{ font-size: .9em; }		
-}
-
-/* @480px */
-@media only screen and (max-width: 30em){
-	nav ul{ max-height: 0; }
-	.reveal{ max-height:19em; }
-	nav ul .nav-item{ -webkit-box-sizing: border-box;
-		 			  -moz-box-sizing: border-box;
-     				  -ms-box-sizing: border-box;
-        			  box-sizing: border-box;
-					  width:100%;
-		 			  padding: 15px; }
-	
-	.menu-bar{ display: block; }
-
+	.blog-title{ font-size: 1em; }
 }
 
 /* @380px*/
 @media only screen and (max-width: 23.75em) {
 	.blog-content{ font-size: .9em; }
-	.side-content{ font-size: .8em; }
-	.button{ padding: 10px 15px; }
 	.nav-item{ font-size: 1.2em; }
 }
 

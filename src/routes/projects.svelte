@@ -33,22 +33,32 @@ console.log(search(needle, haystack));
 
 pre, .result-style {
     word-break: break-word;
-    border-radius: 10px;
+    // border-radius: 10px;
 }
 
-code, .result-style {
-    color: #fff;
-}
-
-pre {
-    background: rgb(0, 158, 250);
-    border: 3px solid hsl(208, 100%, 49%);
+code {
+    color: #ec5f67;
 }
 
 .result-style {
-    background: rgb(223, 14, 14);
-    border: 3px solid hsl(0, 93%, 60%);
+    color: #5fb3b3
+}
+
+pre {
+    background: #f5f7f9;
+    // background: rgb(0, 158, 250);
+    // border: 3px solid hsl(208, 100%, 49%);
+    border-left: 2px solid #69c;
+    border-bottom: 1px solid #d8dee9;
+}
+
+.result-style {
+    // background: rgb(223, 14, 14);
+    // border: 3px solid hsl(0, 93%, 60%);
     text-align: center;
+    background: #f5f7f9;
+    border-left: 2px solid #69c;
+    border-bottom: 1px solid #d8dee9;
 }
 
 // .code-snippet {

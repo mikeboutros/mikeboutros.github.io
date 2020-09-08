@@ -24,6 +24,7 @@
         display: grid;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(3, 1fr);
+        background-color: #000;
     }
 
     @media all and (min-width: 992px) {
@@ -40,6 +41,7 @@
         font-weight: bold;
         text-underline-offset: -1em;
         align-self: center;
+        color: #fff;
     }
 
     @import "src/scss/mediaqueries.scss";
