@@ -13,9 +13,145 @@
 <style lang="scss">
 	@import "src/scss/global.scss";
 
+	.c-posts {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: top;
+	padding: 5%;
+  
+  &__item {
+    flex-grow: 1;
+    padding-bottom: 2em;
+    
+    &:first-child {
+      flex-grow: 2;
+    }
+  }
+}
+
+@media all and (min-width:600px) {
+  .c-posts {
+    &__item {
+      flex-basis: 50%;
+      padding-right: 5%;
+      
+      &:first-child {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@media all and (min-width:1000px) {
+  .c-posts {
+    &__item {
+      flex-basis: 33%;
+      
+      &:first-child {
+        flex-basis: 66%;
+      }
+    }
+  }
+}
+
+@media all and (min-width:1400px) {
+  .c-posts {
+    &__item {
+      flex-basis: 25%;
+      
+      &:first-child {
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+
+/* Other Non-Flexbox Related Styles */
+.c-header {
+  background: #EDD382;
+  text-align: center;
+  padding: 2em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1.6em;
+  
+  h1, h2, p {
+    max-width: 40em;
+    margin: 0 auto;
+    
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  a {
+    color: #000;
+  }
+}
+
+h1 {
+  font-size: calc(130% + 1vw);
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+a {
+  color: #0F5257;
+}
+
+.c-btn {
+  color: #000;
+  display: inline-block;
+  border-bottom: 4px solid #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  letter-spacing: .1em;
+  padding: .3em 0;
+  position: relative;
+  transition: .2s all;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #FF521B;
+    height: 0%;
+    transition: .2s all;
+    left: 0;
+    z-index: -10;
+  }
+  
+  &:hover {
+    padding-left: .75em;
+    padding-right: .75em;
+    color: grey;
+    border-color: #FF521B;
+    
+    &:before {
+      height: 100%;
+    }
+  }
+}
+
 .blog-list {
 	display: grid;
-  	grid-template-rows: 80px repeat(4, 1fr);
+	grid-template-rows: 80px;
+  	// grid-template-rows: 80px repeat(4, 1fr);
   	grid-template-columns: 1fr;
 	grid-gap: 1em;
 }
@@ -29,7 +165,8 @@ li {
 
 @media all and (min-width: 992px) {
 	.blog-list {
-    grid-template-rows: repeat(5, 1fr);
+	grid-template-rows: 1fr;
+    // grid-template-rows: repeat(5, 1fr);
   }
 }
 
@@ -73,7 +210,6 @@ ul {
 }
 
 /* Blog Posts */
-
 
 .blog-post {
 	padding: 35px 0px;
@@ -119,23 +255,24 @@ ul {
 	@import "src/scss/mediaqueries.scss";
 </style>
 
-<svelte:head>
+<!-- <svelte:head>
 	<title>Blog</title>
-</svelte:head>
+</svelte:head> -->
 
 <div class="blog-list">
 
 	<header>
 		<h1>Table of Contents</h1>
-  </header>
-  
+	  </header>
+
+<!--   
   {#each posts as post}
     <div class="blog-post">
       <h1 class="blog-title">
         <a rel='prefetch' href='blog/{post.slug}'>{post.title}</a>
       </h1>
     </div>
-  {/each}
+  {/each} -->
 
 	<!-- <ul>
 		{#each posts as post} -->
@@ -148,3 +285,13 @@ ul {
 	</ul> -->
 
 </div>
+
+  <section class="c-posts">
+	{#each posts as post}
+	<article class="c-posts__item">
+		  <h2>{post.title}</h2>
+		  <p>{@html post.html}</p>
+		  <!-- <p><a rel='prefetch' href="blog/{post.slug}" class="c-btn">Read More</a></p> -->
+	</article>
+	{/each}
+  </section>

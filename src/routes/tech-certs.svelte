@@ -35,9 +35,9 @@
   @import "src/scss/mediaqueries.scss";
 </style>
 
-<svelte:head>
+<!-- <svelte:head>
 	<title>Technical Certs</title>
-</svelte:head>
+</svelte:head> -->
 
 <div class="tech-certs-list">
 

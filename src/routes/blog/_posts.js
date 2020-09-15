@@ -9,6 +9,14 @@
 
 const posts = [
 {
+	title: 'Raspberry Pi',
+	slug: 'raspberry-pi',
+	html: `<p>I've found myself more and more interested in purchasing a Raspberry Pi.</p>
+	<p>I saw a <a href="https://news.ycombinator.com/item?id=20264911">thread on Hacker News</a> that asked the users what they did with their Raspberry Pi.</p>
+	<p>There are a variety of uses detailed in the thread from providing information to triggering certain events for real life actions. The opportunities seem endless.</p>
+	<p>I'll be doing more research on this great tech and determining where it would be practical in my life.</p>`
+},
+{
 	title: 'CSS Grid: A concept not yet understood',
 	slug: 'css-grid-a-concept-not-yet-understood',
 	html: `<p>The CSS grid is a magnificent creation. It makes creating a website swift versus the traditional way. It shares a similar backbone to Bootstrap where you have a finite amount of spaces to fill.
@@ -28,8 +36,8 @@ const posts = [
 	title: 'Diving into something new: Ethical hacking: Part 2',
 	slug: 'diving-into-something-new-ethical-hacking-part-two',
 	html: `<p>I've been watching a <a href="https://www.youtube.com/watch?v=3Kq1MIfTWCE">penetration testing beginner course</a> (~15 hours long) and it has been very educational so far. I'm 6 hours into the video. There is so much material in this video that it would be impossible to go through it all in one sitting without it numbing your brain.</p>
-	<p>As the video proceeds, I find myself questioning myself what I expected from this video. Here I thought it was all tools and programs to download and it would do 99% of the work. This is where I was more wrong.<p>
-	<p>Penetration testing is not only using tools, it is using your problem solving skills and thinking outside of the box. Many times tools can fail to find information so you have to think about what you are trying to achieve and what tools you have at your disposal to achieve your goal.</p>`
+	<p>As the video proceeds, I find myself questioning myself what I expected from this video. Here I thought it was all tools and programs to download and it would do 99% of the work. This is where I couldn't be more wrong.<p>
+	<p>Penetration testing is not just tools, it is using your problem solving skills and thinking outside of the box. Many times tools can fail to find information so you have to think about what you are trying to achieve and what tools you have at your disposal to achieve your goal.</p>`
 },
 {
 	title: 'Diving into something new: Ethical hacking: Part 1',

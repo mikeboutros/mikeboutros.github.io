@@ -80,9 +80,9 @@ pre {
     @import "src/scss/mediaqueries.scss";
 </style>
 
-<svelte:head>
+<!-- <svelte:head>
 	<title>Projects</title>
-</svelte:head>
+</svelte:head> -->
 
 <div class="project-list">
 

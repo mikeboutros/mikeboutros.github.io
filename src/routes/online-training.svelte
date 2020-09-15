@@ -28,9 +28,9 @@
   @import "src/scss/mediaqueries.scss";
 </style>
 
-<svelte:head>
+<!-- <svelte:head>
 	<title>Online Training</title>
-</svelte:head>
+</svelte:head> -->
 
 <div class="online-training-list">
 

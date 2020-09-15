@@ -6,7 +6,7 @@
 
 	main {
 		position: relative;
-		max-width: 53em;
+		/* max-width: 53em; */
 		background-color: white;
 		/* height: 100vh;
 		background-color: #ee5522;

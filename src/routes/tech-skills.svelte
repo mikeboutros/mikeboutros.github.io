@@ -202,9 +202,9 @@ $grid-row-2: 3;
 
 </style>
 
-<svelte:head>
+<!-- <svelte:head>
 	<title>Technical Skills</title>
-</svelte:head>
+</svelte:head> -->
 
 <div class="tech-skills-box">
 
