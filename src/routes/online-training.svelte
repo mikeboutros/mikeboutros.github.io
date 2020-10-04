@@ -15,8 +15,6 @@
   & a {
       @include links;
       // text-decoration-style: wavy;
-      color: #63e1f6;
-      // color: red;
       // transition-property: color;
       // transition-duration: 1s;
       // transition-timing-function: ease-out;

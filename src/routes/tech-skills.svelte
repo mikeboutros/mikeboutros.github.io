@@ -26,19 +26,25 @@
   .tech-skills-box {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 100px 1fr repeat(8, 60px);
+    grid-template-rows: 1fr repeat(9, 60px);
     justify-items: center;
 }
 
 @for $i from 1 through 5 {
   .tech-skills-year-#{$i} {
     grid-column: $i;
-    @include years;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    grid-row: 1 / 2;
+    text-shadow: 0px 0px 0.5px #000;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
   }
 }
 
-$grid-row-1: 2;
-$grid-row-2: 3;
+$grid-row-1: 1;
+$grid-row-2: 2;
 
 @for $i from 1 through 9 {
   .tech-skills-icon-#{$i} {
@@ -49,7 +55,7 @@ $grid-row-2: 3;
 @media all and (min-width: 992px) {
 
 .tech-skills-box {
-  grid-template-rows: 100px 50px repeat(7, 1fr);
+  grid-template-rows: 50px repeat(8, 1fr);
 
   & img {
     width: 115px;
@@ -59,7 +65,9 @@ $grid-row-2: 3;
 @for $i from 1 through 5 {
   .tech-skills-year-#{$i} {
     grid-column: $i;
-    @include years;
+    grid-row: 1 / 2;
+    text-shadow: 0px 0px 0.5px #000;
+    text-align: center;
     writing-mode: horizontal-tb;
     transform: rotate(0deg);
     font-size: 1.5em;
@@ -68,12 +76,15 @@ $grid-row-2: 3;
   }
 }
 
+$grid-row-1: 1;
+$grid-row-2: 2;
+
+@for $i from 1 through 9 {
+  .tech-skills-icon-#{$i} {
+    grid-row: $grid-row-1 + $i unquote("/") $grid-row-2 + $i;
+  }
 }
 
-
-.border-box {
-  @include border-box;
-  padding: 0 !important;
 }
 
 @import "src/scss/mediaqueries.scss";
