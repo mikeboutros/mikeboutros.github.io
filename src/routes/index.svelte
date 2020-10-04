@@ -1,4 +1,5 @@
 <script>
+
 </script>
 
 <style lang="scss">
@@ -11,17 +12,21 @@
 
 	section {
 		display: grid;
-		grid-template-rows: 50px 1fr;
-		grid-template-columns: 1fr;
-		grid-gap: 10px;
+		grid-template-columns: 30px 1fr 30px;
+		grid-template-rows: repeat(3, 200px);
 	}
 
-	p {
-		grid-column: 1 / -1;
+	.intro {
+		grid-column: 2 / 3;
+		grid-row: 2 / -2;
+		text-align: center;
+		align-self: center;
 	}
 
-	ul {
-		grid-column: 1 / 2;
+	.underline {
+		text-decoration-style: wavy;
+		color: red;
+		font-size: 1.25em;
 	}
 
 	@import "src/scss/mediaqueries.scss";
@@ -30,16 +35,9 @@
 <!-- <img src="./develop3.png" alt="" /> -->
 
 <section>
-	<p>This is my technical profile. It is built in Sapper using:</p>
-
-	<ul>
-		<li>HTML5</li>
-		<li>CSS3/SCSS</li>
-		<li>JavaScript</li>
-		<li>BootStrap4</li>
-		<li>SVG for the icons</li>
-		<li>Font Awesome</li>
-		<li>Custom Google Fonts</li>
-	</ul>
-
+	<div class="intro">
+		<h1>WELCOME</h1>
+		<p>This is my technical profile.</p>
+		<p>It is built in <a href="https://sapper.svelte.dev/" class="underline">Sapper</a>, an application framework powered by <a href="https://svelte.dev/" class="underline">Svelte</a>.</p>
+	</div>
 </section>

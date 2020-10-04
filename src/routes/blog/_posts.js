@@ -11,26 +11,31 @@ const posts = [
 {
 	title: 'Raspberry Pi',
 	slug: 'raspberry-pi',
-	html: `<p>I've found myself more and more interested in purchasing a Raspberry Pi.</p>
-	<p>I saw a <a href="https://news.ycombinator.com/item?id=20264911">thread on Hacker News</a> that asked the users what they did with their Raspberry Pi.</p>
+	html: `<p>Raspberry Pi's are interesting. The mass amount of things you can do with them is astounding.</p>
+	<p>I saw a <a href="https://news.ycombinator.com/item?id=20264911">thread on Hacker News</a> that asked the users what they do with their Raspberry Pi.</p>
 	<p>There are a variety of uses detailed in the thread from providing information to triggering certain events for real life actions. The opportunities seem endless.</p>
-	<p>I'll be doing more research on this great tech and determining where it would be practical in my life.</p>`
+	<p>As I read more into this, I find myself wanting to purchase one. I'll be doing more research on this great tech and determining where it would be practical in my life.</p>`
 },
 {
 	title: 'CSS Grid: A concept not yet understood',
 	slug: 'css-grid-a-concept-not-yet-understood',
-	html: `<p>The CSS grid is a magnificent creation. It makes creating a website swift versus the traditional way. It shares a similar backbone to Bootstrap where you have a finite amount of spaces to fill.
-	<p>On the plus side it essentially removes all the crazy calculations you have to do with margins and padding. You can delegate an entire row to one thing or split something into several groups in rows, columns or both!</p>
-	<p>The thing is, the concept is easy but it gets very confusing when you have alternative ways to do things for practically everything.</p>
-	<p>You can read articles online from dawn to dusk and still scratch your head on the many methods of doing one thing. </p>
-	<p>If there is one thing I learned reading online, it is that I still don't fully grasp CSS grid. It is so simple yet so complicated.</p>
-	<p>I'll keep reading articles and making up mock grids to fully grasp the true power of the grid.</p>`
+	html: `<p>The CSS grid is a magnificent creation. It allows websites to build on a grid system that eliminates inconsistencies in sizing and placement issues.</p>
+	<p>One of the positives if not the main reason to use this grid system is that it essentially removes all the crazy calculations you have to do with margins and padding. You can reserve an entire row to one thing or split a row into several groups of "boxes".</p>
+	<p>The concept is simple but it gets very complicated when the content expands and the layout changes.</p>
+	<p>There are so many resources online when it comes to this grid system. There is something to learn from every resource. There is no one way to do things and it is interesting to see what developers can come up with.</p>
+	<p>For now however, I'll continue reading articles and making up mock grids to fully grasp the true power of the grid.</p>`
 },
 {
-	title: 'A cool interactive resume',
-	slug: 'a-cool-interactive-resume',
-	html: `<p>I was looking through some of my favorites and I stumbled on this interactive resume I had saved for inspiration and thought I would share it.</p>
-	<p><a href="http://www.rleonardi.com/interactive-resume">Here</a> is the link to the web page.</p>`
+	title: 'Remembering Python',
+	slug: 'remembering-python',
+	html: `<p>Python: the language that we all praise as the best beginner friendly language.</p>
+	<p>Python was my favorite programming language when I took coding more seriously. It was one of the first all-purpose language I actually learned other than the standard HTML/CSS combo.</p>
+	<p>Once I started to branch off into building my portfolio website, I put Python on the back burner while I focused on HTML, CSS, & JS. At the time I didn't feel that Python was necessary for the purpose of my project.</p>
+	<p>I also took on frameworks like Rails and Angular among technologies like Node.js.</p>
+	<p>I was steering towards being a jack of all trades but then I wasn't interested in knowing a little of everything. I really want to be a pro at one thing and then develop from there.</p>
+	<p>Having gone through a Python tutorial again, I forgot how humanlike the code was and it almost speaks the same language as a human.</p>
+	<p>This is what makes Python appealing. Anyone with a basic understanding of code can understand Python versus many of the other languages that are out there.</p>
+	<p>I'm considering to get back into Python to hone my skills. Python has great potential and I would like to get into more web crawling and AI.</p>`
 },
 {
 	title: 'Diving into something new: Ethical hacking: Part 2',
@@ -49,17 +54,12 @@ const posts = [
 	<p>It's fascinating to me when I think about how someone developed their network topology, website, database, etc... even the physical security.</p>`
 },
 {
-	title: 'Remembering Python',
-	slug: 'remembering-python',
-	html: `<p>Python: the language that we all praise as the best beginner friendly language.</p>
-	<p>Python was my favorite programming language when I took coding more seriously. It was one of the first all-purpose language I actually learned other than the standard HTML/CSS combo.</p>
-	<p>Once I started to branch off into building my portfolio website, I put Python on the back burner while I focused on HTML, CSS, & JS. At the time I didn't feel that Python was necessary for the purpose of my project.</p>
-	<p>I also took on frameworks like Rails and Angular among technologies like Node.js.</p>
-	<p>I was steering towards being a jack of all trades but then I wasn't interested in knowing a little of everything. I really want to be a pro at one thing and then develop from there.</p>
-	<p>Having gone through a Python tutorial again, I forgot how humanlike the code was and it almost speaks the same language as a human.</p>
-	<p>This is what makes Python appealing. Anyone with a basic understanding of code can understand Python versus many of the other languages that are out there.</p>
-	<p>I'm considering to get back into Python to hone my skills. Python has great potential and I would like to get into more automation like web crawling.</p>`
+	title: 'A cool interactive resume',
+	slug: 'a-cool-interactive-resume',
+	html: `<p>I was looking through some of my favorites and I stumbled on this interactive resume I had saved for inspiration and thought I would share it.</p>
+	<p><a href="http://www.rleonardi.com/interactive-resume">Here</a> is the link to the web page.</p>`
 },
+
 ];
 	posts.forEach(post => {
 		post.html = post.html.replace(/^\t{3}/gm, '');

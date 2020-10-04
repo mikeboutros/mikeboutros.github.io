@@ -57,9 +57,9 @@
 }
 
 @media all and (max-width: 992px) {
-    header h1 {
-    font-size: 3em;
-  }
+  //   header h1 {
+  //   font-size: 3em;
+  // }
 
   // nav::after {
   //   content: "MICHAEL BOUTROS";
@@ -70,55 +70,12 @@
 
 @media all and (min-width: 992px) {
 
-  .tech-skills-box {
-    grid-template-rows: 100px 50px repeat(7, 1fr);
-
-    & img {
-      width: 115px;
-    }
-  }
-
-  @for $i from 1 through 5 {
-    .tech-skills-year-#{$i} {
-      grid-column: $i;
-      @include years;
-      writing-mode: horizontal-tb;
-      transform: rotate(0deg);
-      font-size: 1.5em;
-      font-family: Arial, Helvetica, sans-serif;
-      align-self: center;
-    }
-  }
-
-  .tech-certs-list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px 60px 150px;
-
-    & img {
-      width: 150px;
-    }
-    
-    & a {
-      font-size: 1.75em;
-    }
-  }
-
 }
 
 @media all and (max-width: 600px) {
   header h1 {
     font-size: 2em;
   }
-
-  .tech-certs-list {
-    display: grid;
-    text-align: center;
-    justify-items: center;
-    grid-template-rows: 60px 60px repeat(3, 1fr);
-    grid-template-columns: 1fr;
-  }
-
-
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -157,22 +114,15 @@
   //     font-size: 1.25em;
   //   }
   // }
-}
 
-@media all and (max-width: 480px) {
-  // header h1 {
-  //   font-size: 2em;
-  // }
-  
-  //   .online-training-list {
-  //   grid-template-rows: 1fr repeat(2, 60px);
-  // }
-
-
-  .online-training-list {
-    grid-template-rows: 1fr repeat(4, 60px);
+  .project-list {
+    display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 10px;
+    align-items: center;
   }
 }
+
+
 
 /*-----------------------------------------*/
