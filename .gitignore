@@ -6,3 +6,5 @@ yarn-error.log
 /__sapper__/
 README1.md
 tip-images
+test-a.svelte
+test-b.svelte

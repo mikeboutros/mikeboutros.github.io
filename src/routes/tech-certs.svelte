@@ -32,6 +32,18 @@
 
   .transcript {
     grid-column: 1 / -1;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  .icon-1, .icon-2, .icon-3 {
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0);
+    }
   }
 
   .icon-1 {
@@ -89,9 +101,9 @@
   }
 }
 
-.border-box {
-@include border-box;
-}
+// .border-box {
+//   @include border-box;
+// }
 
 
   @import "src/scss/mediaqueries.scss";

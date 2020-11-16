@@ -31,6 +31,12 @@ h2 {
 	text-align: center;
 }
 
+@media all and (max-width: 600px) {
+	h2 {
+		font-size: 1.25em;
+	}
+  }
+
 p {
 	padding: 2em;
 	border-top: 2px solid orange;

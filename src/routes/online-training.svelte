@@ -22,6 +22,7 @@
 
     & a:hover {
       text-decoration-style: wavy;
+      color: red;
     }
   }
 

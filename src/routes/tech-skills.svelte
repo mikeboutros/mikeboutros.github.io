@@ -1,32 +1,26 @@
 <script>
-  
-  let bootstrap = './svg/bootstrap.svg';
-  let js = './svg/js.svg';
-  let jquery = './svg/jquery.svg';
-  let ruby = './svg/ruby.svg';
-  let ror = './svg/ror.svg';
-  let react = './svg/react.svg';
-  let python = './svg/python.svg';
-  let svelte = './svg/svelte.svg';
-  let sass = './svg/sass.svg';
-  let mysql = './svg/mysql.svg';
-  let git = './svg/git.svg';
-  let html = './svg/html.svg';
-  let css = './svg/css.svg';
-  let pcdata = './svg/pcdata.svg';
-  let oracle = './svg/oracle.svg';
-  let sap = './svg/sap.svg';
-  let office = './svg/office.svg';
-  
+  import List1 from './tech-skills/List1.svelte';
+  import List2 from './tech-skills/List2.svelte';
+  import List3 from './tech-skills/List3.svelte';
+  import List4 from './tech-skills/List4.svelte';
+  import List5 from './tech-skills/List5.svelte';
+
 </script>
 
 <style lang="scss">
   @import "src/scss/global.scss";
   
-  .tech-skills-box {
+//   .tech-skills-box {
+//     display: grid;
+//     grid-template-columns: repeat(5, 1fr);
+//     grid-template-rows: 1fr repeat(9, 60px);
+//     justify-items: center;
+// }
+
+.tech-skills-box {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr repeat(9, 60px);
+    grid-template-rows: 1fr 60px;
     justify-items: center;
 }
 
@@ -55,8 +49,8 @@ $grid-row-2: 2;
 @media all and (min-width: 992px) {
 
 .tech-skills-box {
-  grid-template-rows: 50px repeat(8, 1fr);
-
+  // grid-template-rows: 50px repeat(8, 1fr);
+  grid-template-rows: 50px 1fr;
   & img {
     width: 115px;
   }
@@ -103,35 +97,55 @@ $grid-row-2: 2;
 
   <div class="tech-skills-year-1">&lt; 1 year</div>
 
-  <div class="tech-skills-icon-1"><img src={bootstrap} alt="BOOTSTRAP ICON" /></div>
+  <div class="tech-skills-icon-1">
+    <List1 />
+  </div>
+
+  <!-- <div class="tech-skills-icon-1"><img src={bootstrap} alt="BOOTSTRAP ICON" /></div>
   <div class="tech-skills-icon-2"><img src={js} alt="JS ICON" /></div>
   <div class="tech-skills-icon-3"><img src={jquery} alt="JQUERY ICON" /></div>
   <div class="tech-skills-icon-4"><img src={ruby} alt="RUBY ICON" /></div>
   <div class="tech-skills-icon-5"><img src={ror} alt="ROR ICON" /></div>
   <div class="tech-skills-icon-6"><img src={react} alt="REACT ICON" /></div>
   <div class="tech-skills-icon-7"><img src={python} alt="PYTHON ICON" /></div>
-  <div class="tech-skills-icon-8"><img src={svelte} alt="SVELTE ICON" /></div>
+  <div class="tech-skills-icon-8"><img src={svelte} alt="SVELTE ICON" /></div>-->
 
   <div class="tech-skills-year-2">1 year</div>
+  
+  <div class="tech-skills-icon-1">
+    <List2 />
+  </div>
 
-  <div class="tech-skills-icon-1"><img src={sass} alt="SASS ICON" /></div>
+  <!-- <div class="tech-skills-icon-1"><img src={sass} alt="SASS ICON" /></div>
   <div class="tech-skills-icon-2"><img src={mysql} alt="MYSQL ICON" /></div>
   <div class="tech-skills-icon-3"><img src={git} alt="GIT ICON" /></div>
-  <div class="tech-skills-icon-4"></div>
+  <div class="tech-skills-icon-4"></div> -->
 
   <div class="tech-skills-year-3">3 years</div>
 
-  <div class="tech-skills-icon-1"><img src={html} alt="HTML ICON" /></div>
+  <div class="tech-skills-icon-1">
+    <List3 />
+  </div>
+
+  <!-- <div class="tech-skills-icon-1"><img src={html} alt="HTML ICON" /></div>
   <div class="tech-skills-icon-2"><img src={css} alt="CSS ICON" /></div>
   <div class="tech-skills-icon-3"><img src={pcdata} alt="PC DATA ICON" /></div>
-  <div class="tech-skills-icon-4"><img src={oracle} alt="ORACLE ICON" /></div>
+  <div class="tech-skills-icon-4"><img src={oracle} alt="ORACLE ICON" /></div> -->
 
   <div class="tech-skills-year-4">6 years</div>
 
-  <div class="tech-skills-icon-1"><img src={sap} alt="SAP ICON" /></div>
+  <div class="tech-skills-icon-1">
+    <List4 />
+  </div>
+
+  <!-- <div class="tech-skills-icon-1"><img src={sap} alt="SAP ICON" /></div> -->
 
   <div class="tech-skills-year-5">&gt; 10 years</div>
 
-  <div class="tech-skills-icon-1"><img src={office} alt="OFFICE ICON" /></div>
+  <div class="tech-skills-icon-1">
+    <List5 />
+  </div>
+
+  <!-- <div class="tech-skills-icon-1"><img src={office} alt="OFFICE ICON" /></div>  -->
 
 </div>

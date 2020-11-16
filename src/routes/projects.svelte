@@ -1,5 +1,17 @@
 <script>
 
+    import hljs from 'highlight.js';
+
+    import { str1, str2, str3, str4, str5 } from './project-code.js';
+
+    let {value: highlighted1} = hljs.highlight("javascript", str1);
+    let {value: highlighted2} = hljs.highlight("javascript", str2);
+    let {value: highlighted3} = hljs.highlight("bash", str3);
+    let {value: highlighted4} = hljs.highlight("Python", str4);
+    let {value: highlighted5} = hljs.highlight("python", str5);
+
+    // **** //
+
     const letters = (() => {
         const caps = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));
         return caps.concat(caps.map(letter => letter.toLowerCase()));
@@ -36,24 +48,30 @@ pre, .result-style {
     border-radius: 15px;
 }
 
-code {
-    color: #ec5f67;
-}
+// code {
+//    color: #ec5f67;
+// }
 
 pre {
-    background: #f5f7f9;
+    // background: #ffffff;
     // background: rgb(0, 158, 250);
     // border: 3px solid hsl(208, 100%, 49%);
     // border-left: 2px solid #69c;
-    border-bottom: 1px solid #d8dee9;
+    border: 1px solid #f2f2f2;
+    padding: 35px;
+}
+
+h3 {
+    font-weight: bold;
 }
 
 h3, h5, .result {
-    background: #f5f7f9;
-    border-bottom: 1px solid #d8dee9;
+    // background: #7fbfff;
+    // border-bottom: 1px solid #000000;
     padding: 15px 5px;
     text-align: center;
     border-radius: 15px;
+    border: 1px solid #7fbfff75;
 }
 
 .result-style {
@@ -61,13 +79,20 @@ h3, h5, .result {
     // border: 3px solid hsl(0, 93%, 60%);
     color: #5fb3b3;
     text-align: center;
-    background: #f5f7f9;
+    background: #ffffff;
     // border-left: 2px solid #69c;
-    border-bottom: 1px solid #d8dee9;
+    border: 1px solid #f2f2f2;
     padding: 15px 45px;
 }
-
 @media all and (max-width: 480px) {
+  .project-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    align-items: center;
+  }
+}
+@media all and (max-width: 768px) {
   .project-list {
     display: grid;
     grid-template-columns: 1fr;
@@ -90,9 +115,13 @@ h3, h5, .result {
         <h3>Code Snippets</h3>
     </header> -->
 
-<h3>Alphabet Generator</h3>
+    <h3>Alphabet Generator</h3>
 
-<pre>
+    <pre><code>{@html highlighted1}</code></pre>
+
+<!-- original -->
+    
+<!-- <pre>
     <code>
         {`
     const letters = (() => {
@@ -102,17 +131,19 @@ h3, h5, .result {
             console.log(letters);
         `}
     </code>
-</pre>
+</pre> -->
 
-<div class="result">Result:</div>
+<div class="result">Result</div>
 
-<div class="result-style">
-    {@html letters}
-</div>
+<div class="result-style">{@html letters}</div>
 
     <h3>Needle In Haystack</h3>
 
-    <pre>
+    <pre><code>{@html highlighted2}</code></pre>
+
+    <!-- original -->
+
+    <!-- <pre>
         <code>
             {`
         function search(needle, haystack)
@@ -125,9 +156,9 @@ h3, h5, .result {
             console.log(search(needle, haystack));
             `}
         </code>
-    </pre>
+    </pre> -->
 
-    <div class="result">Result:</div>
+    <div class="result">Result</div>
 
     <div class="result-style">
         {@html search(needle, haystack)}
@@ -135,7 +166,11 @@ h3, h5, .result {
 
     <h3>Code Snippets</h3>
 
-    <pre class="code-snippet">
+    <pre><code>{@html highlighted3}</code></pre>
+
+    <!-- original -->
+
+    <!-- <pre class="code-snippet">
         <code>
             {`
         # Compare two folders
@@ -159,11 +194,13 @@ h3, h5, .result {
         mkfile 10g {path/to/file/file.txt}
             `}
         </code>
-    </pre>
+    </pre> -->
 
     <h5>Host file online</h5>
 
-    <pre class="code-snippet">
+    <pre><code>{@html highlighted4}</code></pre>
+
+    <!-- <pre class="code-snippet">
         <code>
             {`
         # Python2
@@ -173,12 +210,13 @@ h3, h5, .result {
         python3 -m http.server 80 
             `}
         </code>
-    </pre>
+    </pre> -->
 
     <h5>Setting up FTP server</h5>
 
-    <pre class="code-snippet">
-        
+    <pre><code>{@html highlighted5}</code></pre>
+
+    <!-- <pre class="code-snippet">
         <code>
             {`
         # Python3
@@ -186,15 +224,5 @@ h3, h5, .result {
         python3 -m pyftpdlib -p 21 -w
             `}
         </code>
-    </pre>
+    </pre> -->
 </div>
-
-<!-- <div style="color: red;">
-    # Python3
-</div>
-<div style="color: blue;">
-    pip3 install pyftpdlib
-</div>
-<div style="color: green;">
-    python3 -m pyftpdlib -p 21 -w
-</div> -->
