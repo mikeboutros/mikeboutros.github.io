@@ -7,16 +7,21 @@
 
 <style lang="scss">
 
+// .icons {
+//         filter: grayscale(100%);
+//     &:hover {
+//         filter: contrast(200%);
+//     }
+// }
+
+// .icons:hover {
+//     filter: drop-shadow(0 0 0.25rem rgb(14, 158, 194));
+// }
+
 </style>
 
 {#each itemSet as item}
-    <div>
+    <div class="icons">
         <ListItem {item} />
     </div>
 {/each}
-
-<!-- {#each itemSet2 as item}
-    <div>
-        <ListItem {item} />
-    </div>
-{/each} -->

@@ -102,18 +102,18 @@
 }
 
   .card {
-    padding: 1.5rem;
+    // padding: 1.5rem;
     // width: 225px;
-    background: white;
+    // background: white;
     border-radius: 15px;
     // margin-right: 50px;
     // margin-bottom: 15px;
-    box-shadow: 2px 2px 5px #9cb3b7;
+    // box-shadow: 2px 2px 5px #9cb3b7;
   }
 
-  .card h3 {
-    color: #00a1df;
-  }
+  // .card h3 {
+  //   color: #00a1df;
+  // }
 
   @import "src/scss/mediaqueries.scss";
 </style>
@@ -122,7 +122,7 @@
 	<title>Online Training</title>
 </svelte:head> -->
 
-<div class="online-training-list card">
+<div class="online-training-list">
 
   <!-- <header>
     <h1>Online Training</h1>

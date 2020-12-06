@@ -11,6 +11,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         list-style-type: none;
+        gap: 15px;
+        padding: 10px;
         // background-color: rgb(0, 183, 255);
         // background-color: #63e1f6;
         // background-color: #222222;
@@ -20,7 +22,8 @@
     li {
         text-align: center;
         font-weight: bold;
-        padding: 1em;
+        // padding: 1em;
+        
         align-self: center;
         
         &:hover {
@@ -41,9 +44,9 @@
             // text-shadow: 0px 0px 1px #fff;
         }
 
-        li {
-            padding: 1em;
-        }
+        // li {
+        //     padding: 1em;
+        // }
     }
 
     @import "src/scss/mediaqueries.scss";

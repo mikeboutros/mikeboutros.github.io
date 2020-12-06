@@ -16,18 +16,19 @@
 .blog-list {
 	display: grid;
 	grid-template-rows: 1fr;
+	row-gap: 15px;
 }
 
 .table-of-contents {
 	grid-row: 2 / -3;
 }
 
-.posts {
-	grid-row: 3 / -2;
-}
+// .posts {
+// 	grid-row: 3 / -2;
+// }
 
 h2 {
-	padding: 1em;
+	padding: 0.5em 1em 1em 1em;
 	text-align: center;
 }
 
@@ -37,19 +38,30 @@ h2 {
 	}
   }
 
-p {
-	padding: 2em;
-	border-top: 2px solid orange;
+// p {
+// 	padding: 2.5em;
+// 	border-top: 2px solid orange;
+// }
+
+.posts-item {
+    padding: 1.25rem;
+    // box-shadow: 2px 2px 5px #9cb3b7;
+	transition: box-shadow .3s;
+	border-radius: 15px;
+	border: 1px solid #ccc;
+
+	&:hover {
+		box-shadow: 0 0 11px rgba(33,33,33,.2); 
+	}
 }
 
-.card {
-    padding: 1.25rem;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 2px 2px 5px #9cb3b7;
-  }
+hr {
+    border-top: 3px solid orange;
+    padding: 15px;
+	width: 175px;
+	margin: auto;
+}
 
-	@import "src/scss/mediaqueries.scss";
 </style>
 
 <!-- <svelte:head>
@@ -60,8 +72,6 @@ p {
 		<h1>Table of Contents</h1>
   </header> -->
 
-<div class="blog-list">
-
 	<!-- <section class="table-of-contents">
 		{#each posts as post}
 		<article class="posts-item">
@@ -71,13 +81,13 @@ p {
 		{/each}
 	</section> -->
 
-	<section class="posts">
+	<section class="blog-list">
 		{#each posts as post}
-		<article class="posts-item card">
+		<article class="posts-item">
 			<h2>{post.title}</h2>
+			<hr>
 			<p>{@html post.html}</p>
 			<!-- <a href="/blog">Back to list</a> -->
 		</article>
 		{/each}
 	</section>
-</div>

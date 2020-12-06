@@ -11,7 +11,7 @@
     display: grid;
     text-align: center;
     justify-items: center;
-    grid-template-rows: 100px 60px repeat(3, 200px) 100px;
+    grid-template-rows: 100px repeat(3, 200px);
     grid-template-columns: 1fr;
 
     & a {
@@ -47,15 +47,15 @@
   }
 
   .icon-1 {
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
   }
 
   .icon-2 {
-    grid-row: 4 / 5;
+    grid-row: 3 / 4;
   }
 
   .icon-3 {
-    grid-row: 5 / 6;
+    grid-row: 4 / 5;
   }
 
   // @media all and (max-width: 992px) {
@@ -66,7 +66,7 @@
 
   @media all and (max-width: 600px) {
     .tech-certs-list {
-      grid-template-rows: 100px 60px repeat(3, 150px) 100px;
+      grid-template-rows: 100px 60px repeat(3, 150px);
 
       & a {
         font-size: 1.5em;

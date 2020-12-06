@@ -4,18 +4,10 @@
   import List3 from './tech-skills/List3.svelte';
   import List4 from './tech-skills/List4.svelte';
   import List5 from './tech-skills/List5.svelte';
-
 </script>
 
 <style lang="scss">
   @import "src/scss/global.scss";
-  
-//   .tech-skills-box {
-//     display: grid;
-//     grid-template-columns: repeat(5, 1fr);
-//     grid-template-rows: 1fr repeat(9, 60px);
-//     justify-items: center;
-// }
 
 .tech-skills-box {
     display: grid;
@@ -46,16 +38,6 @@ $grid-row-2: 2;
   }
 }
 
-@media all and (min-width: 992px) {
-
-.tech-skills-box {
-  // grid-template-rows: 50px repeat(8, 1fr);
-  grid-template-rows: 50px 1fr;
-  & img {
-    width: 115px;
-  }
-}
-
 @for $i from 1 through 5 {
   .tech-skills-year-#{$i} {
     grid-column: $i;
@@ -73,13 +55,15 @@ $grid-row-2: 2;
 $grid-row-1: 1;
 $grid-row-2: 2;
 
-@for $i from 1 through 9 {
-  .tech-skills-icon-#{$i} {
-    grid-row: $grid-row-1 + $i unquote("/") $grid-row-2 + $i;
+  @for $i from 1 through 9 {
+    .tech-skills-icon-#{$i} {
+      grid-row: $grid-row-1 + $i unquote("/") $grid-row-2 + $i;
+    }
   }
-}
 
-}
+  // @media all and (min-width: 992px) {
+
+  // }
 
 @import "src/scss/mediaqueries.scss";
 
@@ -149,3 +133,6 @@ $grid-row-2: 2;
   <!-- <div class="tech-skills-icon-1"><img src={office} alt="OFFICE ICON" /></div>  -->
 
 </div>
+
+<!-- <meter value="0.6">60%
+</meter> 60% -->
