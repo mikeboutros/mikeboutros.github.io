@@ -2,7 +2,7 @@
     import ListItem from '../tech-skills/ListItem.svelte';
 
     const prefix = "./svg/";
-    const itemSet = ["python.svg"].map(num => prefix + num);
+    const itemSet = ["svelte.svg"].map(num => prefix + num);
 </script>
 
 <style lang="scss">
@@ -11,7 +11,7 @@
 </style>
 
 {#each itemSet as item}
-    <div class="icons-5">
+    <div class="icons-6">
         <ListItem {item} />
     </div>
 {/each}

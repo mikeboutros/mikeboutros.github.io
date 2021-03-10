@@ -32,7 +32,7 @@ export let str3 =
 # Convert audio file to iPhone ringtone
     afconvert input.mp3 ringtone.m4r -f m4af
 
-# Convert file to HTML (supported formats are plain text, rtf and doc/docx)
+# Convert file to HTML (supports plain text, rtf and doc/docx)
     textutil -convert html file.ext
 
 # Creates an empty file (10 gigabyte file in this case)

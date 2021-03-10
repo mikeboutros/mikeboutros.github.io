@@ -1,12 +1,17 @@
 <script>
-	export let status;
+	// export let status;
 	// export let error;
 
 	const dev = process.env.NODE_ENV === 'development';
 </script>
 
 <style>
-	h1, p {
+
+  main {
+    height: 100%;
+  }
+
+	/* h1, p {
 		margin: 0 auto;
 	}
 
@@ -18,69 +23,62 @@
 
 	p {
 		margin: 1em auto;
-	}
+	} */
 
-	@media (min-width: 480px) {
+	/* @media (min-width: 480px) {
 		h1 {
 			font-size: 6em;
 		}
-	}
+	} */
 
-	body
-{
-  background-color:#141019;
-  background: radial-gradient(at 50% -20%, #908392, #0d060e) fixed;
+	/* body {
+      background-color:#141019;
+      background: radial-gradient(at 50% -20%, #908392, #0d060e) fixed;
+    } */
+
+
+#handboy {
+  animation: swing ease-in-out 1.3s infinite alternate;
+  transform-origin: 98% 98%;
+  transform-box: fill-box;
 }
 
 
-#handboy
-{
-   animation: swing ease-in-out 1.3s infinite alternate;
-    transform-origin: 98% 98%;
-    transform-box: fill-box;
-    
+#girllight {
+  animation: swing ease-in-out 1.3s infinite alternate;
+  transform-origin: 0% 97%;
+  transform-box: fill-box;
 }
 
-
-#girllight
-{
-   animation: swing ease-in-out 1.3s infinite alternate;
-    transform-origin: 0% 97%;
-    transform-box: fill-box;
+#hairgirl {
+  animation: swinghair ease-in-out 1.3s infinite alternate;
+  transform-origin: 60% 0%;
+  transform-box: fill-box;
 }
 
-#hairgirl
-{
-    animation: swinghair ease-in-out 1.3s infinite alternate;
-   transform-origin: 60% 0%;
-    transform-box: fill-box;
-  
-}
-
-#zero
-{
+#zero {
   transform-origin:bottom;
   transform-box:fill-box;
-  
 }
 
 /*************swing************/
 @keyframes swing {
-    0% { transform: rotate(10deg); }
-    100% { transform: rotate(-10deg); }
+  0% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
 }
 
 
 /*************swing hair************/
 @keyframes swinghair {
-    0% { transform: rotate(6deg); }
-    100% { transform: rotate(-6deg); }
+  0% { transform: rotate(6deg); }
+  100% { transform: rotate(-6deg); }
 }
+
 </style>
 
-<svelte:head>
+<!-- <svelte:head>
 	<title>{status}</title>
-</svelte:head>
+</svelte:head> -->
 
 <!-- <h1>{status}</h1> -->
 

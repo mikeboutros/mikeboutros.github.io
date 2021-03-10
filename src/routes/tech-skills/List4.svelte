@@ -2,15 +2,16 @@
     import ListItem from '../tech-skills/ListItem.svelte';
 
     const prefix = "./svg/";
-    const itemSet = ["sap.svg"].map(num => prefix + num);
+    const itemSet = ["ror.svg"].map(num => prefix + num);
 </script>
 
 <style lang="scss">
+@import "static/global.scss";
 
 </style>
 
 {#each itemSet as item}
-    <div>
+    <div class="icons-4">
         <ListItem {item} />
     </div>
 {/each}

@@ -6,7 +6,14 @@
 
 	main {
 		position: relative;
-		max-width: 60em;
+		/* max-width: 55em; */
+		/* background: url("../develop3.png") no-repeat center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover; */
+		/* width: 100vw; */
+  		/* height: 100vh; */
 		/* background-color: white; */
 		/* height: 100vh;
 		background-color: #ee5522;
@@ -14,7 +21,7 @@
 		background-attachment: fixed;
 		background-size: cover; */
 		/* background-color: #222222; */
-		padding: 2em;
+		/* padding: 2em; */
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
@@ -22,10 +29,10 @@
 </style>
 
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 </head>
 
 <svelte:head>

@@ -3,7 +3,7 @@
 </script>
 
 <style lang="scss">
-  @import "src/scss/global.scss";
+  @import "static/global.scss";
 
   .online-training-list {
     display: grid;

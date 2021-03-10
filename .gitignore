@@ -8,3 +8,7 @@ README1.md
 tip-images
 test-a.svelte
 test-b.svelte
+src/components/Image/
+src/routes/blog/
+static/develop3.png
+static/develop4.png

@@ -32,7 +32,7 @@
 </script>
 
 <style lang="scss">
-    // @import "src/scss/global.scss";
+    // @import "static/global.scss";
 
 // .project-list {
 //     // grid-template-rows: 100px;
