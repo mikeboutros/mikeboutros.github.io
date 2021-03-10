@@ -1,8 +1,7 @@
 .DS_Store
 /node_modules/
-# /src/node_modules/@sapper/
+/src/node_modules/@sapper/
 yarn-error.log
-/cypress/screenshots/
 /__sapper__/
 README1.md
 tip-images
@@ -14,3 +13,5 @@ static/develop3.png
 static/develop4.png
 .vscode/
 /cypress
+misc.svelte
+about.svelte
